@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_main_tab_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bottom_bar" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp" >
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_weixin"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="one" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_weixin"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#FF5654"
+                android:clickable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="首页" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_friend"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="two" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_friend"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#7836FF"
+                android:clickable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="产品" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_contact"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="three" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_contact"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#7AA6DD"
+                android:clickable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="用户" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_tab_bottom_setting"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:tag="four" >
+
+            <ImageButton
+                android:id="@+id/btn_tab_bottom_setting"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#BB33DD"
+                android:clickable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="新闻" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
