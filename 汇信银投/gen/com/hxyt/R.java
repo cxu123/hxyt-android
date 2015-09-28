@@ -13,8 +13,10 @@ public final class R {
         public static final int loading_view_show=0x7f040001;
         public static final int modal_in=0x7f040002;
         public static final int modal_out=0x7f040003;
-        public static final int reverse_anim=0x7f040004;
-        public static final int rotating=0x7f040005;
+        public static final int push_right_in=0x7f040004;
+        public static final int push_right_out=0x7f040005;
+        public static final int reverse_anim=0x7f040006;
+        public static final int rotating=0x7f040007;
     }
     public static final class attr {
     }
