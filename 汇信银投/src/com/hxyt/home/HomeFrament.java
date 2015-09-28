@@ -5,8 +5,10 @@ package com.hxyt.home;
 import java.lang.reflect.Field;
 
 import com.hxyt.R;
+import com.hxyt.order.OrderInfoActivity;
 import com.hxyt.utils.L;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -39,7 +41,7 @@ public class HomeFrament extends Fragment {
 	    return super.onCreateView(inflater, container, savedInstanceState);
 	}else {
 	    View view = inflater.inflate(R.layout.fragment_home, container, false);
-	    strart_ActiButton=(Button) view.findViewById(R.id.textView1);
+	    strart_ActiButton=(Button) view.findViewById(R.id.button1);
 	    iniClick();
 	    return view;  
 	}
@@ -53,6 +55,8 @@ public class HomeFrament extends Fragment {
 	    @Override
 	    public void onClick(View v) {
 		// TODO Auto-generated method stub
+		Intent intent=new Intent(getActivity(),OrderInfoActivity.class);
+		getActivity().startActivity(intent);
 		
 	    }
 	});

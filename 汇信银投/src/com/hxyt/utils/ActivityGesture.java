@@ -76,15 +76,15 @@ public class ActivityGesture {
 		         // 切换Activity
 		         // Intent intent = new Intent(ViewSnsActivity.this, UpdateStatusActivity.class);
 		         // startActivity(intent);
-		         Toast.makeText(hostActivity, "向左手势", Toast.LENGTH_SHORT).show();
+		        // Toast.makeText(hostActivity, "向左手势", Toast.LENGTH_SHORT).show();
 		     } else if (e2.getX() - e1.getX() > verticalMinDistance && Math.abs(velocityX) > minVelocity) {
 		 
 		         // 切换Activity
 		         // Intent intent = new Intent(ViewSnsActivity.this, UpdateStatusActivity.class);
 		         // startActivity(intent);
-		         Toast.makeText(hostActivity, "向右手势", Toast.LENGTH_SHORT).show();
+		         //Toast.makeText(hostActivity, "向右手势", Toast.LENGTH_SHORT).show();
 			 
-		         //hostActivity.finish();
+		         hostActivity.finish();
 		        // PendingTransition(R.anim.push_right_in, R.anim.push_right_out);
 		     }
 		 

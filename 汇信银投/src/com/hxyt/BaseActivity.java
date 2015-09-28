@@ -23,11 +23,12 @@ import android.widget.Toast;
  * @since
  * @return
  */
-public abstract class BaseActivity extends Activity  {
+public abstract class BaseActivity extends Activity {
     protected String tag = "";
     // protected String TAG="";
     protected AppContent app;
     private LoadingView loadingView;
+
     // protected String
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +36,16 @@ public abstract class BaseActivity extends Activity  {
 	super.onCreate(savedInstanceState);
 	setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 	app = (AppContent) getApplication();
 	app.appManager.addActivity(this);
 	tag = this.getLocalClassName();
-	loadingView=new LoadingView(this);
+	loadingView = new LoadingView(this);
 	iniActionbarColor();
 	findViews();
 	init(savedInstanceState);
 	setViewOnlister();
-	
+
     }
 
     private void iniActionbarColor() {
@@ -131,18 +133,33 @@ public abstract class BaseActivity extends Activity  {
 	win.setAttributes(winParams);
     }
 
-    public void showLoadingView(){
+    public void showLoadingView() {
 	loadingView.show();
     }
-    
-    public void dismissLoadingView(){
+
+    public void dismissLoadingView() {
 	loadingView.Viewdismiss();
     }
-    
-    public void finishActivity(){
+
+    public void finishActivity() {
+
+	this.finish();
 	overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
-        this.finish();
     }
-  
-    
+
+    @Override
+    public void finish() {
+	// TODO Auto-generated method stub
+
+	this.finish();
+	overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+    }
+
+    @Override
+    public void startActivity(Intent intent) {
+	// TODO Auto-generated method stub
+	super.startActivity(intent);
+	overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+	// super.startActivity(intent);
+    }
 }

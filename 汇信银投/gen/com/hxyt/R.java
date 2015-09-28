@@ -46,25 +46,25 @@ public final class R {
     }
     public static final class id {
         public static final int PullLayout=0x7f080014;
-        public static final int btn_tab_bottom_contact=0x7f080010;
-        public static final int btn_tab_bottom_friend=0x7f08000e;
-        public static final int btn_tab_bottom_setting=0x7f080012;
-        public static final int btn_tab_bottom_weixin=0x7f08000c;
-        public static final int button1=0x7f080009;
+        public static final int btn_tab_bottom_contact=0x7f080011;
+        public static final int btn_tab_bottom_friend=0x7f08000f;
+        public static final int btn_tab_bottom_setting=0x7f080013;
+        public static final int btn_tab_bottom_weixin=0x7f08000d;
+        public static final int button1=0x7f08000a;
         public static final int exitGuid=0x7f080006;
         public static final int flagLayout=0x7f080003;
         public static final int guidance_viewpage=0x7f080001;
         public static final int head_view=0x7f08001c;
         public static final int id_content=0x7f080000;
-        public static final int id_tab_bottom_contact=0x7f08000f;
-        public static final int id_tab_bottom_friend=0x7f08000d;
-        public static final int id_tab_bottom_setting=0x7f080011;
-        public static final int id_tab_bottom_weixin=0x7f08000b;
+        public static final int id_tab_bottom_contact=0x7f080010;
+        public static final int id_tab_bottom_friend=0x7f08000e;
+        public static final int id_tab_bottom_setting=0x7f080012;
+        public static final int id_tab_bottom_weixin=0x7f08000c;
         public static final int loading_icon=0x7f080018;
         public static final int loadmore_view=0x7f080016;
         public static final int loadstate_iv=0x7f08001a;
         public static final int loadstate_tv=0x7f080019;
-        public static final int ly_main_tab_bottom=0x7f08000a;
+        public static final int ly_main_tab_bottom=0x7f08000b;
         public static final int progressBar1=0x7f08001b;
         public static final int pull_icon=0x7f08001d;
         public static final int pullableListView1=0x7f080015;
@@ -77,22 +77,23 @@ public final class R {
         public static final int tag_2=0x7f080005;
         public static final int tag_3=0x7f080004;
         public static final int test=0x7f080007;
-        public static final int textView1=0x7f080013;
+        public static final int textView1=0x7f080009;
     }
     public static final class layout {
         public static final int activit_home=0x7f030000;
         public static final int activity_guidance=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_user_login=0x7f030003;
-        public static final int activity_user_register=0x7f030004;
-        public static final int botton_bar=0x7f030005;
-        public static final int fragment_home=0x7f030006;
-        public static final int fragment_order=0x7f030007;
-        public static final int fragment_product_news=0x7f030008;
-        public static final int fragment_user=0x7f030009;
-        public static final int load_more=0x7f03000a;
-        public static final int loading_view=0x7f03000b;
-        public static final int refresh_head=0x7f03000c;
+        public static final int activity_orderinfo=0x7f030003;
+        public static final int activity_user_login=0x7f030004;
+        public static final int activity_user_register=0x7f030005;
+        public static final int botton_bar=0x7f030006;
+        public static final int fragment_home=0x7f030007;
+        public static final int fragment_order=0x7f030008;
+        public static final int fragment_product_news=0x7f030009;
+        public static final int fragment_user=0x7f03000a;
+        public static final int load_more=0x7f03000b;
+        public static final int loading_view=0x7f03000c;
+        public static final int refresh_head=0x7f03000d;
     }
     public static final class string {
         public static final int app_name=0x7f060000;

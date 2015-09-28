@@ -27,6 +27,7 @@
         <activity android:name="com.hxyt.user.User_login_Activity"></activity>
         <activity android:name="com.hxyt.user.User_Register_Activity"></activity>
         <activity android:name="com.hxyt.other.GuidanceActivity"></activity>
+        <activity android:name="com.hxyt.order.OrderInfoActivity"></activity>
     </application>
 
 </manifest>
