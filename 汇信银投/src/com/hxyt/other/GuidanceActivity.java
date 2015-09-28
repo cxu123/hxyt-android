@@ -117,6 +117,8 @@ public class GuidanceActivity extends Activity {
 		// TODO Auto-generated method stub
 		startActivity(new Intent(GuidanceActivity.this,Home_activity.class));
 		GuidanceActivity.this.finish();
+		//overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+		overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 	    }
 	});
     }

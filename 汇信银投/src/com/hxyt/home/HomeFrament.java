@@ -12,7 +12,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /** 
@@ -26,6 +28,8 @@ import android.view.ViewGroup;
 
 public class HomeFrament extends Fragment {
 
+    private Button strart_ActiButton;
+    
     @Override
     public View onCreateView(LayoutInflater inflater,
             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,30 +38,24 @@ public class HomeFrament extends Fragment {
 	if (savedInstanceState!=null) {
 	    return super.onCreateView(inflater, container, savedInstanceState);
 	}else {
-	    return inflater.inflate(R.layout.fragment_home, container, false);  
+	    View view = inflater.inflate(R.layout.fragment_home, container, false);
+	    strart_ActiButton=(Button) view.findViewById(R.id.textView1);
+	    iniClick();
+	    return view;  
 	}
 	 
 	
     }
     
-    
-    @Override
-    public void onDetach()
-    {
-        super.onDetach();
-        try
-        {
-            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
-            childFragmentManager.setAccessible(true);
-            childFragmentManager.set(this, null);
-        }
-        catch (NoSuchFieldException e)
-        {
-            throw new RuntimeException(e);
-        }
-        catch (IllegalAccessException e)
-        {
-            throw new RuntimeException(e);
-        }
+    private void iniClick(){
+	strart_ActiButton.setOnClickListener(new OnClickListener() {
+	    
+	    @Override
+	    public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	    }
+	});
     }
+
 }

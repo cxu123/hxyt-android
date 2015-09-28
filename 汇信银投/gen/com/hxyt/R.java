@@ -17,6 +17,8 @@ public final class R {
         public static final int push_right_out=0x7f040005;
         public static final int reverse_anim=0x7f040006;
         public static final int rotating=0x7f040007;
+        public static final int zoomin=0x7f040008;
+        public static final int zoomout=0x7f040009;
     }
     public static final class attr {
     }

@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
  * @author 作者 陈修园:
  * @date 创建时间：2015-9-18 下午4:12:25
  * @version 1.0
- * @parameter
+ * @parameter 加载View
  * @since
  * @return
  */

@@ -1,5 +1,6 @@
 package com.hxyt;
 
+import com.hxyt.utils.ActivityGesture;
 import com.hxyt.utils.SystemBarTintManager;
 import com.hxyt.view.LoadingView;
 
@@ -9,25 +10,26 @@ import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View.OnTouchListener;
 import android.view.MotionEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 /**
- * @author 陈修园
- * @date 2015-7-17 10:59:15
+ * @author 作者 陈修园:
+ * @date 创建时间：2015-9-28 上午10:24:35
  * @version 1.0
  * @parameter
  * @since
  * @return
  */
-public abstract class BaseActivity extends Activity  {
+
+public abstract class BaseActivityOnTouch extends Activity {
     protected String tag = "";
     // protected String TAG="";
     protected AppContent app;
     private LoadingView loadingView;
+    private ActivityGesture gesture;
     // protected String
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,14 @@ public abstract class BaseActivity extends Activity  {
 	app = (AppContent) getApplication();
 	app.appManager.addActivity(this);
 	tag = this.getLocalClassName();
-	loadingView=new LoadingView(this);
+	loadingView = new LoadingView(this);
+	gesture=new ActivityGesture(this);
 	iniActionbarColor();
+	
 	findViews();
 	init(savedInstanceState);
 	setViewOnlister();
-	
+
     }
 
     private void iniActionbarColor() {
@@ -131,18 +135,34 @@ public abstract class BaseActivity extends Activity  {
 	win.setAttributes(winParams);
     }
 
-    public void showLoadingView(){
+    public void showLoadingView() {
 	loadingView.show();
     }
-    
-    public void dismissLoadingView(){
+
+    public void dismissLoadingView() {
 	loadingView.Viewdismiss();
     }
+
     
-    public void finishActivity(){
-	overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
-        this.finish();
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // TODO Auto-generated method stub
+        return gesture.setOnTouch(event);
     }
-  
+    
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        // TODO Auto-generated method stub
+	gesture.setTouchEvent(ev);
+        return super.dispatchTouchEvent(ev);
+    }
+    
+    @Override
+    public void finish() {
+        // TODO Auto-generated method stub
+	overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+        super.finish();
+    }
+    
     
 }

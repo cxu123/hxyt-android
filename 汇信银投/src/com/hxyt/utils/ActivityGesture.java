@@ -16,7 +16,7 @@ import android.widget.Toast;
  * @author 作者 陈修园:
  * @date 创建时间：2015-9-25 下午5:46:35
  * @version 1.0
- * @parameter
+ * @parameter Android activity 手势控制器
  * @since
  * @return
  */
@@ -76,7 +76,7 @@ public class ActivityGesture {
 		         // 切换Activity
 		         // Intent intent = new Intent(ViewSnsActivity.this, UpdateStatusActivity.class);
 		         // startActivity(intent);
-		         //Toast.makeText(this, "向左手势", Toast.LENGTH_SHORT).show();
+		         Toast.makeText(hostActivity, "向左手势", Toast.LENGTH_SHORT).show();
 		     } else if (e2.getX() - e1.getX() > verticalMinDistance && Math.abs(velocityX) > minVelocity) {
 		 
 		         // 切换Activity

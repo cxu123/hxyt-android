@@ -7,6 +7,14 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ListView;
 
+
+/**
+ * 
+ * @author 陈修园
+ * 可下拉刷新的ListView
+ * 实现接口来
+ *
+ */
 public class PullableListView extends ListView implements Pullable
 {
 
